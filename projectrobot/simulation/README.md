@@ -2,7 +2,6 @@ Simulation
    
 configs - XBotControl Config Files and Yaml   
 robots - XBotControl Robot File   
-Stuart - duplicate file   
    
 gaitgenv3 - final version of gait generator, run and use directional keys during gazebo simulator   
 gaitgenv2 - old version   
