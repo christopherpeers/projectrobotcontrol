@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<model>
+  <name></name>
+  <version></version>
+  <sdf version='1.6'>stuart.sdf</sdf>
+
+  <author>
+   <name>chris</name>
+   <email>ll14c4p@leeds.ac.uk</email>
+  </author>
+
+  <description>
+    Simulation of the Stuart robot.
+  </description>
+</model>

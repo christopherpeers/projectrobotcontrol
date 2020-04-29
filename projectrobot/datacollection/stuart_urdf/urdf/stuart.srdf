@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<robot name="stuart">
+
+   <group name="front_left_leg">
+      <chain base_link="chassis" tip_link="FL_foot"/>
+   </group>
+
+   <group name="front_right_leg">
+      <chain base_link="chassis" tip_link="FR_foot"/>
+   </group>
+
+   <group name="rear_right_leg">
+      <chain base_link="chassis" tip_link="RR_foot"/>
+   </group>
+
+   <group name="rear_left_leg">
+      <chain base_link="chassis" tip_link="RL_foot"/>
+   </group>
+
+
+   <group name="legs">
+      <group name="front_left_leg"/>
+      <group name="front_right_leg"/>
+      <group name="rear_right_leg"/>
+      <group name="rear_left_leg"/>
+   </group>
+
+
+   <group name="chains">
+    <group name="front_left_leg"/>
+    <group name="front_right_leg"/>
+    <group name="rear_left_leg"/>
+    <group name="rear_right_leg"/>
+   </group>
+
+  <group name="imu_sensors">
+    <link name="imu_link"/>
+  </group>
+
+   <group_state name="home" group="chains">
+	<joint name="motorFL1_motorFL2" value="0.0"/>
+	<joint name="motorFL2_thigh" value="-0.67"/>
+	<joint name="FLthigh_calf" value="-1.75"/>
+	<joint name="FLcalf_foot" value="0.86"/>
+
+	<joint name="motorFR1_motorFR2" value="0.0"/>
+	<joint name="motorFR2_thigh" value="-0.67"/>
+	<joint name="FRthigh_calf" value="-1.75"/>
+	<joint name="FRcalf_foot" value="0.86"/>
+
+	<joint name="motorRL1_motorRL2" value="0.0"/>
+	<joint name="motorRL2_motorRL3" value="0.0"/>
+	<joint name="motorRL3_thigh" value="-0.61"/>
+	<joint name="RLthigh_calf" value="-1.92"/>
+	<joint name="RLcalf_foot" value="1.02"/>
+
+	<joint name="motorRR1_motorRR2" value="0.0"/>
+	<joint name="motorRR2_motorRR3" value="0.0"/>
+	<joint name="motorRR3_thigh" value="-0.61"/>
+	<joint name="RRthigh_calf" value="-1.92"/>
+	<joint name="RRcalf_foot" value="1.02"/>
+   </group_state>
+
+</robot>
+

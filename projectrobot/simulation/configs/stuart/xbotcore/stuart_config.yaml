@@ -1,0 +1,24 @@
+RobotName: "stuart"
+
+GazeboXBotPlugin:
+  control_rate: 0.001
+  gains:
+    motorFL1_motorFL2: {p: 10000, d: 10}
+    motorFR1_motorFR2: {p: 10000, d: 10}
+    motorRL1_motorRL2: {p: 10000, d: 10}
+    motorRR1_motorRR2: {p: 10000, d: 10}
+    motorRL2_motorRL3: {p: 10000, d: 10}
+    motorRR2_motorRR3: {p: 10000, d: 10}
+    motorFL2_thigh: {p: 10000, d: 10}
+    motorFR2_thigh: {p: 10000, d: 10}
+    motorRL3_thigh: {p: 10000, d: 10}
+    motorRR3_thigh: {p: 10000, d: 10}
+    FLthigh_calf: {p: 10000, d: 10}
+    FRthigh_calf: {p: 10000, d: 10}
+    RLthigh_calf: {p: 10000, d: 10}
+    RRthigh_calf: {p: 10000, d: 10}
+    FLcalf_foot: {p: 10000, d: 10}
+    FRcalf_foot: {p: 10000, d: 10}
+    RLcalf_foot: {p: 10000, d: 10}
+    RRcalf_foot: {p: 10000, d: 10}
+    tailmotor_tail: {p: 10000, d: 10}

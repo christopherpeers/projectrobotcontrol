@@ -1,0 +1,1181 @@
+<sdf version='1.6'>
+  <model name='stuart'>
+    <link name='chassis'>
+      <pose frame=''>0 0 0.2 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>-0.002934 -0.0002 -0.001587 0 -0 0</pose>
+        <mass>20.6436</mass>
+        <inertia>
+          <ixx>0.444602</ixx>
+          <ixy>8.39044e-05</ixy>
+          <ixz>0.0201047</ixz>
+          <iyy>1.67587</iyy>
+          <iyz>-4.00007</iyz>
+          <izz>1.71585</izz>
+        </inertia>
+      </inertial>
+      <collision name='chassis_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.105 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='chassis_fixed_joint_lump__motorFL1_collision_1'>
+        <pose frame=''>0.0808 0.0388 -0.0203 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.04 0.04 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='chassis_fixed_joint_lump__motorFR1_collision_2'>
+        <pose frame=''>0.0808 -0.0388 -0.0203 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.04 0.04 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='chassis_fixed_joint_lump__motorRL1_collision_3'>
+        <pose frame=''>-0.0792 0.0308 -0.0203 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.04 0.04 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='chassis_fixed_joint_lump__motorRR1_collision_4'>
+        <pose frame=''>-0.0792 -0.0308 -0.0203 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.04 0.04 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='chassis_fixed_joint_lump__tailmotor_collision_5'>
+        <pose frame=''>-0.082 -0.0018 0.0156 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.06 0.06 0.06</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='chassis_fixed_joint_lump__imu_collision_6'>
+        <pose frame=''>0.07335 0 0.0105 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.051 0.036 0.015</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='chassis_fixed_joint_lump__pi_collision_7'>
+        <pose frame=''>0.015 0 0.0205 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.06 0.09 0.015</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='chassis_fixed_joint_lump__servodriver_collision_8'>
+        <pose frame=''>-0.036 0 0.0205 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.024 0.06 0.015</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='chassis_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/chassis2.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='chassis_fixed_joint_lump__motorFL1_visual_1'>
+        <pose frame=''>0.0808 0.0388 -0.0203 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/frontleftrollmotor.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='chassis_fixed_joint_lump__motorFR1_visual_2'>
+        <pose frame=''>0.0808 -0.0388 -0.0203 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/frontrightrollmotor.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='chassis_fixed_joint_lump__motorRL1_visual_3'>
+        <pose frame=''>-0.0792 0.0308 -0.0203 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/rearlefthipmotor.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='chassis_fixed_joint_lump__motorRR1_visual_4'>
+        <pose frame=''>-0.0792 -0.0308 -0.0203 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/rearrighthipmotor.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='chassis_fixed_joint_lump__tailmotor_visual_5'>
+        <pose frame=''>-0.082 -0.0018 0.0156 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/tailmotor.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='chassis_fixed_joint_lump__imu_visual_6'>
+        <pose frame=''>0.07335 0 0.0105 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.051 0.036 0.015</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>__default__</uri>
+            <name>__default__</name>
+          </script>
+        </material>
+      </visual>
+      <visual name='chassis_fixed_joint_lump__pi_visual_7'>
+        <pose frame=''>0.015 0 0.0205 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.06 0.09 0.015</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='chassis_fixed_joint_lump__servodriver_visual_8'>
+        <pose frame=''>-0.036 0 0.0205 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.024 0.06 0.015</size>
+          </box>
+        </geometry>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <sensor name='imu' type='imu'>
+        <always_on>1</always_on>
+        <update_rate>500</update_rate>
+        <visualize>1</visualize>
+        <topic>__default_topic__</topic>
+        <imu>
+          <angular_velocity/>
+          <linear_acceleration/>
+        </imu>
+        <pose frame=''>0.07335 0 0.0105 0 -0 0</pose>
+      </sensor>
+    </link>
+    <link name='motorFL2'>
+      <pose frame=''>0.1208 0.0422 0.1776 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>20.145</mass>
+        <inertia>
+          <ixx>0.0733489</ixx>
+          <ixy>0.00030338</ixy>
+          <ixz>0.00191822</ixz>
+          <iyy>0.250685</iyy>
+          <iyz>-7.5402e-05</iyz>
+          <izz>0.254469</izz>
+        </inertia>
+      </inertial>
+      <collision name='motorFL2_collision'>
+        <pose frame=''>0 0.0122 -0.0023 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.07 0.04 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='motorFL2_visual'>
+        <pose frame=''>0 0.0122 -0.0023 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/frontleftpitchmotor.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='motorFL1_motorFL2' type='revolute'>
+      <child>motorFL2</child>
+      <parent>chassis</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='FL_thigh'>
+      <pose frame=''>0.1258 0.0812 0.1676 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>20.0033</mass>
+        <inertia>
+          <ixx>0.0733489</ixx>
+          <ixy>0.00030338</ixy>
+          <ixz>0.00191822</ixz>
+          <iyy>0.250685</iyy>
+          <iyz>-7.5402e-05</iyz>
+          <izz>0.254469</izz>
+        </inertia>
+      </inertial>
+      <collision name='FL_thigh_collision'>
+        <pose frame=''>-0.0365 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.07 0.005 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='FL_thigh_visual'>
+        <pose frame=''>-0.0365 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/thighlink.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='motorFL2_thigh' type='revolute'>
+      <child>FL_thigh</child>
+      <parent>motorFL2</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='FL_calf'>
+      <pose frame=''>0.0658 0.0862 0.1676 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>20.0038</mass>
+        <inertia>
+          <ixx>0.0733489</ixx>
+          <ixy>0.00030338</ixy>
+          <ixz>0.00191822</ixz>
+          <iyy>0.250685</iyy>
+          <iyz>-7.5402e-05</iyz>
+          <izz>0.254469</izz>
+        </inertia>
+      </inertial>
+      <collision name='FL_calf_collision'>
+        <pose frame=''>-0.036 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.08 0.005 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='FL_calf_visual'>
+        <pose frame=''>-0.036 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/calflink.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FLthigh_calf' type='revolute'>
+      <child>FL_calf</child>
+      <parent>FL_thigh</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='FL_foot'>
+      <pose frame=''>-0.0044 0.0862 0.1676 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>20.0057</mass>
+        <inertia>
+          <ixx>0.0733489</ixx>
+          <ixy>0.00030338</ixy>
+          <ixz>0.00191822</ixz>
+          <iyy>0.250685</iyy>
+          <iyz>-7.5402e-05</iyz>
+          <izz>0.254469</izz>
+        </inertia>
+      </inertial>
+      <collision name='FL_foot_collision'>
+        <pose frame=''>-0.0058 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.015 0.02 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='FL_foot_visual'>
+        <pose frame=''>-0.0058 0 0 0 1.57 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/foot.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FLcalf_foot' type='revolute'>
+      <child>FL_foot</child>
+      <parent>FL_calf</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='motorFR2'>
+      <pose frame=''>0.1208 -0.0422 0.1776 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>20.145</mass>
+        <inertia>
+          <ixx>0.0733489</ixx>
+          <ixy>0.00030338</ixy>
+          <ixz>0.00191822</ixz>
+          <iyy>0.250685</iyy>
+          <iyz>-7.5402e-05</iyz>
+          <izz>0.254469</izz>
+        </inertia>
+      </inertial>
+      <collision name='motorFR2_collision'>
+        <pose frame=''>0 -0.0122 -0.0023 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.07 0.04 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='motorFR2_visual'>
+        <pose frame=''>0 -0.0122 -0.0023 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/frontrightpitchmotor.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='motorFR1_motorFR2' type='revolute'>
+      <child>motorFR2</child>
+      <parent>chassis</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='FR_thigh'>
+      <pose frame=''>0.1258 -0.0812 0.1676 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>20.0033</mass>
+        <inertia>
+          <ixx>0.0733489</ixx>
+          <ixy>0.00030338</ixy>
+          <ixz>0.00191822</ixz>
+          <iyy>0.250685</iyy>
+          <iyz>-7.5402e-05</iyz>
+          <izz>0.254469</izz>
+        </inertia>
+      </inertial>
+      <collision name='FR_thigh_collision'>
+        <pose frame=''>-0.0365 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.07 0.005 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='FR_thigh_visual'>
+        <pose frame=''>-0.0365 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/thighlink.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='motorFR2_thigh' type='revolute'>
+      <child>FR_thigh</child>
+      <parent>motorFR2</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='FR_calf'>
+      <pose frame=''>0.0658 -0.0862 0.1676 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>20.0038</mass>
+        <inertia>
+          <ixx>0.0733489</ixx>
+          <ixy>0.00030338</ixy>
+          <ixz>0.00191822</ixz>
+          <iyy>0.250685</iyy>
+          <iyz>-7.5402e-05</iyz>
+          <izz>0.254469</izz>
+        </inertia>
+      </inertial>
+      <collision name='FR_calf_collision'>
+        <pose frame=''>-0.036 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.08 0.005 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='FR_calf_visual'>
+        <pose frame=''>-0.036 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/calflink.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FRthigh_calf' type='revolute'>
+      <child>FR_calf</child>
+      <parent>FR_thigh</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='FR_foot'>
+      <pose frame=''>-0.0044 -0.0862 0.1676 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>20.0057</mass>
+        <inertia>
+          <ixx>0.0733489</ixx>
+          <ixy>0.00030338</ixy>
+          <ixz>0.00191822</ixz>
+          <iyy>0.250685</iyy>
+          <iyz>-7.5402e-05</iyz>
+          <izz>0.254469</izz>
+        </inertia>
+      </inertial>
+      <collision name='FR_foot_collision'>
+        <pose frame=''>-0.0058 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.015 0.02 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='FR_foot_visual'>
+        <pose frame=''>-0.0058 0 0 0 1.57 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/foot.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FRcalf_foot' type='revolute'>
+      <child>FR_foot</child>
+      <parent>FR_calf</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='motorRL2'>
+      <pose frame=''>-0.0827 0.0658 0.1777 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>20.083</mass>
+        <inertia>
+          <ixx>0.0733489</ixx>
+          <ixy>0.00030338</ixy>
+          <ixz>0.00191822</ixz>
+          <iyy>0.250685</iyy>
+          <iyz>-7.5402e-05</iyz>
+          <izz>0.254469</izz>
+        </inertia>
+      </inertial>
+      <collision name='motorRL2_collision'>
+        <pose frame=''>-0.0015 0 -0.006 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.04 0.04 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='motorRL2_visual'>
+        <pose frame=''>-0.0015 0 -0.006 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/rearleftrollmotor.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='motorRL1_motorRL2' type='revolute'>
+      <child>motorRL2</child>
+      <parent>chassis</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='motorRL3'>
+      <pose frame=''>-0.0447 0.0753 0.16715 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>20.145</mass>
+        <inertia>
+          <ixx>0.0733489</ixx>
+          <ixy>0.00030338</ixy>
+          <ixz>0.00191822</ixz>
+          <iyy>0.250685</iyy>
+          <iyz>-7.5402e-05</iyz>
+          <izz>0.254469</izz>
+        </inertia>
+      </inertial>
+      <collision name='motorRL3_collision'>
+        <pose frame=''>0 0.012 -0.0025 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.07 0.04 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='motorRL3_visual'>
+        <pose frame=''>0 0.012 -0.0025 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/rearleftpitchmotor.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='motorRL2_motorRL3' type='revolute'>
+      <child>motorRL3</child>
+      <parent>motorRL2</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='RL_thigh'>
+      <pose frame=''>-0.0397 0.1143 0.15715 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>20.0033</mass>
+        <inertia>
+          <ixx>0.0733489</ixx>
+          <ixy>0.00030338</ixy>
+          <ixz>0.00191822</ixz>
+          <iyy>0.250685</iyy>
+          <iyz>-7.5402e-05</iyz>
+          <izz>0.254469</izz>
+        </inertia>
+      </inertial>
+      <collision name='RL_thigh_collision'>
+        <pose frame=''>-0.0365 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.07 0.005 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='RL_thigh_visual'>
+        <pose frame=''>-0.0365 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/thighlink.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='motorRL3_thigh' type='revolute'>
+      <child>RL_thigh</child>
+      <parent>motorRL3</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='RL_calf'>
+      <pose frame=''>-0.0997 0.1193 0.15715 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>20.0038</mass>
+        <inertia>
+          <ixx>0.0733489</ixx>
+          <ixy>0.00030338</ixy>
+          <ixz>0.00191822</ixz>
+          <iyy>0.250685</iyy>
+          <iyz>-7.5402e-05</iyz>
+          <izz>0.254469</izz>
+        </inertia>
+      </inertial>
+      <collision name='RL_calf_collision'>
+        <pose frame=''>-0.036 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.08 0.005 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='RL_calf_visual'>
+        <pose frame=''>-0.036 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/calflink.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='RLthigh_calf' type='revolute'>
+      <child>RL_calf</child>
+      <parent>RL_thigh</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='RL_foot'>
+      <pose frame=''>-0.1699 0.1193 0.15715 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>20.0057</mass>
+        <inertia>
+          <ixx>0.0733489</ixx>
+          <ixy>0.00030338</ixy>
+          <ixz>0.00191822</ixz>
+          <iyy>0.250685</iyy>
+          <iyz>-7.5402e-05</iyz>
+          <izz>0.254469</izz>
+        </inertia>
+      </inertial>
+      <collision name='RL_foot_collision'>
+        <pose frame=''>-0.0058 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.015 0.02 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='RL_foot_visual'>
+        <pose frame=''>-0.0058 0 0 0 1.57 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/foot.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='RLcalf_foot' type='revolute'>
+      <child>RL_foot</child>
+      <parent>RL_calf</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='motorRR2'>
+      <pose frame=''>-0.0827 -0.0658 0.1777 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>20.083</mass>
+        <inertia>
+          <ixx>0.0733489</ixx>
+          <ixy>0.00030338</ixy>
+          <ixz>0.00191822</ixz>
+          <iyy>0.250685</iyy>
+          <iyz>-7.5402e-05</iyz>
+          <izz>0.254469</izz>
+        </inertia>
+      </inertial>
+      <collision name='motorRR2_collision'>
+        <pose frame=''>-0.0015 0 -0.006 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.04 0.04 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='motorRR2_visual'>
+        <pose frame=''>-0.0015 0 -0.006 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/rearrightrollmotor.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='motorRR1_motorRR2' type='revolute'>
+      <child>motorRR2</child>
+      <parent>chassis</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='motorRR3'>
+      <pose frame=''>-0.0447 -0.0753 0.16715 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>20.145</mass>
+        <inertia>
+          <ixx>0.0733489</ixx>
+          <ixy>0.00030338</ixy>
+          <ixz>0.00191822</ixz>
+          <iyy>0.250685</iyy>
+          <iyz>-7.5402e-05</iyz>
+          <izz>0.254469</izz>
+        </inertia>
+      </inertial>
+      <collision name='motorRR3_collision'>
+        <pose frame=''>0 -0.012 -0.0025 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.07 0.04 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='motorRR3_visual'>
+        <pose frame=''>0 -0.012 -0.0025 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/rearrightpitchmotor.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='motorRR2_motorRR3' type='revolute'>
+      <child>motorRR3</child>
+      <parent>motorRR2</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='RR_thigh'>
+      <pose frame=''>-0.0397 -0.1143 0.15715 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>20.0033</mass>
+        <inertia>
+          <ixx>0.0733489</ixx>
+          <ixy>0.00030338</ixy>
+          <ixz>0.00191822</ixz>
+          <iyy>0.250685</iyy>
+          <iyz>-7.5402e-05</iyz>
+          <izz>0.254469</izz>
+        </inertia>
+      </inertial>
+      <collision name='RR_thigh_collision'>
+        <pose frame=''>-0.0365 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.07 0.005 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='RR_thigh_visual'>
+        <pose frame=''>-0.0365 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/thighlink.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='motorRR3_thigh' type='revolute'>
+      <child>RR_thigh</child>
+      <parent>motorRR3</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='RR_calf'>
+      <pose frame=''>-0.0997 -0.1193 0.15715 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>20.0038</mass>
+        <inertia>
+          <ixx>0.0733489</ixx>
+          <ixy>0.00030338</ixy>
+          <ixz>0.00191822</ixz>
+          <iyy>0.250685</iyy>
+          <iyz>-7.5402e-05</iyz>
+          <izz>0.254469</izz>
+        </inertia>
+      </inertial>
+      <collision name='RR_calf_collision'>
+        <pose frame=''>-0.036 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.08 0.005 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='RR_calf_visual'>
+        <pose frame=''>-0.036 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/calflink.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='RRthigh_calf' type='revolute'>
+      <child>RR_calf</child>
+      <parent>RR_thigh</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='RR_foot'>
+      <pose frame=''>-0.1699 -0.1193 0.15715 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>20.0057</mass>
+        <inertia>
+          <ixx>0.0733489</ixx>
+          <ixy>0.00030338</ixy>
+          <ixz>0.00191822</ixz>
+          <iyy>0.250685</iyy>
+          <iyz>-7.5402e-05</iyz>
+          <izz>0.254469</izz>
+        </inertia>
+      </inertial>
+      <collision name='RR_foot_collision'>
+        <pose frame=''>-0.0058 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.015 0.02 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='RR_foot_visual'>
+        <pose frame=''>-0.0058 0 0 0 1.57 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/foot.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='RRcalf_foot' type='revolute'>
+      <child>RR_foot</child>
+      <parent>RR_calf</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='tail'>
+      <pose frame=''>-0.0853 0.0002 0.2179 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>20.05</mass>
+        <inertia>
+          <ixx>0.0733489</ixx>
+          <ixy>0.00030338</ixy>
+          <ixz>0.00191822</ixz>
+          <iyy>0.250685</iyy>
+          <iyz>-7.5402e-05</iyz>
+          <izz>0.254469</izz>
+        </inertia>
+      </inertial>
+      <collision name='tail_collision'>
+        <pose frame=''>-0.0807 0 0.0865 0 0.55 0</pose>
+        <geometry>
+          <box>
+            <size>0.06 0.04 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='tail_visual'>
+        <pose frame=''>-0.0057 0 0.0115 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://stuart_urdf/meshes/taillink.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='tailmotor_tail' type='revolute'>
+      <child>tail</child>
+      <parent>chassis</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <static>0</static>
+    <plugin name='xbot_plugin_handler' filename='libGazeboXBotPlugin.so'>
+      <path_to_config_file>configs/stuart/configs/stuart.yaml</path_to_config_file>
+    </plugin>
+    <pose frame=''>0 0 0.1 0 -0 0</pose>
+  </model>
+</sdf>

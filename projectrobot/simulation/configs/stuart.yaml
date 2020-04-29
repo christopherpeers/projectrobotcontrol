@@ -1,0 +1,66 @@
+XBotCore:
+  config_path: "/../../../../../../home/christopher/catkin_ws_xbot/src/tutorial_iros2018/configs/stuart/xbotcore/stuart_config.yaml"
+
+XBotInterface:
+  urdf_path: "/../../../../../../home/christopher/catkin_ws_xbot/src/tutorial_iros2018/robots/stuart/urdf/stuart.urdf"
+  srdf_path: "/../../../../../../home/christopher/catkin_ws_xbot/src/tutorial_iros2018/robots/stuart/urdf/stuart.srdf"
+  joint_map_path: "/../../../../../../home/christopher/catkin_ws_xbot/src/tutorial_iros2018/configs/stuart/joint_id_map/stuart_joint_map.yaml"
+
+RobotInterface:
+  framework_name: "ROS"
+
+ModelInterface:
+  model_type: "RBDL"
+  is_model_floating_base: "true"
+  
+MasterCommunicationInterface:
+  framework_name: "ROS"
+
+XBotRTPlugins:
+  plugins: []
+  io_plugins: []
+  
+NRTPlugins:
+  plugins: []
+  
+WebServer:
+  enable: "false"
+  address: "127.0.0.1"
+  port: "8081"
+
+SimulationOptions:
+  verbose_mode: "true"
+
+CartesianInterface:
+  solver: "OpenSot"
+  problem_description:
+    stack:
+      - ["foot_1", "foot_2", "foot_3", "foot_4"]
+      - ["ComXY"]
+      - ["Postural"]
+    constraints: ["JointLimits", "VelocityLimits"]
+
+    foot_1:
+      type: "Cartesian"
+      distal_link: "FL_foot"
+    
+    foot_2:
+      type: "Cartesian"
+      distal_link: "FR_foot"
+
+    foot_3:
+      type: "Cartesian"
+      distal_link: "RL_foot"
+
+    foot_4:
+      type: "Cartesian"
+      distal_link: "RR_foot"
+
+    ComXY:
+      type: "Com"
+      indices: [0, 1, 2]
+      
+    Postural:
+      type: "Postural"
+      lambda: 0.01
+    

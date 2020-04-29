@@ -1,0 +1,21 @@
+joint_map:
+    1: motorFL1_motorFL2
+    2: motorFR1_motorFR2
+    3: motorRL1_motorRL2
+    4: motorRR1_motorRR2
+    5: motorRL2_motorRL3
+    6: motorRR2_motorRR3
+    7: motorFL2_thigh
+    8: motorFR2_thigh
+    9: motorRL3_thigh
+    10: motorRR3_thigh
+    11: FLthigh_calf
+    12: FRthigh_calf
+    13: RLthigh_calf
+    14: RRthigh_calf
+    15: FLcalf_foot
+    16: FRcalf_foot
+    17: RLcalf_foot
+    18: RRcalf_foot
+    19: tailmotor_tail
+    33: imu_chassis
